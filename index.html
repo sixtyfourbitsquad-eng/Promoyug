@@ -344,7 +344,15 @@
                     function updateSlider() { if (slides.length === 0) return; const slideWidth = slides[0].clientWidth; wrapper.style.transform = `translateX(-${currentIndex * slideWidth}px)`; }
                     nextBtn.addEventListener("click", () => { currentIndex = (currentIndex + 1) % slides.length; updateSlider(); });
                     prevBtn.addEventListener("click", () => { currentIndex = (currentIndex - 1 + slides.length) % slides.length; updateSlider(); });
-                    window.addEventListener("resize", updateSlider); updateSlider();
+                   window.addEventListener("resize", updateSlider);
+updateSlider();
+
+// Auto-slide every 4 seconds
+setInterval(() => {
+  currentIndex = (currentIndex + 1) % slides.length;
+  updateSlider();
+}, 4000);
+
                 }
 
                 const modalTriggers = document.querySelectorAll(".modal-trigger"); const modals = document.querySelectorAll(".modal"); const closeButtons = document.querySelectorAll(".modal-close");
