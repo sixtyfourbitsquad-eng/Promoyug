@@ -329,7 +329,14 @@
 
                 const sliderContainer = document.querySelector(".slider-container");
                 if (sliderContainer) {
-                    const wrapper = sliderContainer.querySelector(".slider-wrapper"); const nextBtn = sliderContainer.querySelector(".next"); const prevBtn = sliderContainer.querySelector(".prev"); const images = [ "https://i.imgur.com/gde0h0F.jpeg", "https://i.imgur.com/k2A4p3i.jpeg", "https://i.imgur.com/xI1T8W2.jpeg", "https://i.imgur.com/R8iG33c.jpeg" ]; let currentIndex = 0;
+                    const wrapper = sliderContainer.querySelector(".slider-wrapper"); const nextBtn = sliderContainer.querySelector(".next"); const prevBtn = sliderContainer.querySelector(".prev"); const images = [
+  "01.jpg",
+  "02.jpg",
+  "03.jpg",
+  "04.jpg",
+  "05.jpg"
+];
+ let currentIndex = 0;
                     images.forEach((src) => { wrapper.innerHTML += `<div class="slide"><img src="${src}" alt="Portfolio Work"></div>`; });
                     const slides = wrapper.querySelectorAll(".slide");
                     function updateSlider() { if (slides.length === 0) return; const slideWidth = slides[0].clientWidth; wrapper.style.transform = `translateX(-${currentIndex * slideWidth}px)`; }
