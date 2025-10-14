@@ -91,7 +91,15 @@
             .slider-container { position: relative; }
             .slider-wrapper { display: flex; transition: transform 0.5s ease-in-out; }
             .slide { flex: 0 0 100%; padding: 0 10px; }
-            .slide img { width: 100%; border-radius: 10px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4); border: 2px solid var(--card-border); }
+           .slide img {
+    width: 100%;
+    aspect-ratio: 9 / 16;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    border: 2px solid var(--card-border);
+}
+
             .slider-nav { position: absolute; top: 50%; transform: translateY(-50%); width: calc(100% + 40px); left: -20px; display: flex; justify-content: space-between; z-index: 10; }
             .slider-button { background: rgba(18, 18, 18, 0.7); color: #fff; border: 1px solid var(--card-border); width: 45px; height: 45px; border-radius: 50%; font-size: 20px; cursor: pointer; transition: all 0.3s ease; }
             .slider-button:hover { background: var(--brand-blue); color: var(--dark-bg); }
